@@ -6,6 +6,8 @@ export default withNuxt({
     "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
     "@stylistic/semi": ["error", "always"],
     "@stylistic/comma-dangle": ["error", "always-multiline"],
+    "@stylistic/member-delimiter-style": "off",
+    "vue/singleline-html-element-content-newline": "off",
     "vue/html-self-closing": [
       "error",
       {

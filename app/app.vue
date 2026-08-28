@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 useHead({
   meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
   link: [{ rel: "icon", href: "/favicon.ico" }],
@@ -20,6 +20,7 @@ useSeoMeta({
 
 <template>
   <UApp>
+    <NuxtRouteAnnouncer />
     <UHeader>
       <template #left>
         <NuxtLink to="/">
@@ -42,7 +43,9 @@ useSeoMeta({
     </UHeader>
 
     <UMain>
-      <NuxtPage />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </UMain>
 
     <USeparator />
@@ -50,7 +53,7 @@ useSeoMeta({
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          © {{ new Date().getFullYear() }}
+          ©{{ new Date().getFullYear() }}
         </p>
       </template>
 
