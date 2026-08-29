@@ -3,22 +3,14 @@ import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt({
   rules: {
-    "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
-    "@stylistic/semi": ["error", "always"],
-    "@stylistic/comma-dangle": ["error", "always-multiline"],
+    "@stylistic/quotes": "off",
+    "@stylistic/semi": "off",
+    "@stylistic/comma-dangle": "off",
+    "@stylistic/operator-linebreak": "off",
     "@stylistic/member-delimiter-style": "off",
+    "vue/max-attributes-per-line": "off",
+    "vue/comma-dangle": "off",
     "vue/singleline-html-element-content-newline": "off",
-    "vue/html-self-closing": [
-      "error",
-      {
-        html: {
-          void: "never",
-          normal: "always",
-          component: "always",
-        },
-        svg: "always",
-        math: "always",
-      },
-    ],
+    "vue/html-self-closing": "off",
   },
 });

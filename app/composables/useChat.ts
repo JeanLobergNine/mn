@@ -7,19 +7,24 @@ export default function useChat() {
 
   function createMessage(message: ChatMessage, role: ChatMessage["role"]) {
     const id = messages.value.length.toString();
+
     return {
       id,
       role,
-      content: message.content,
+      content: message,
     };
   }
 
-  function sendMessage(message: ChatMessage) {
+  async function sendMessage(message: ChatMessage) {
     messages.value.push(createMessage(message, "user"));
+    const data = await $fetch<ChatMessage>("/api/ai", {
+      method: "POST",
+      body: {
+        messages: messages.value,
+      },
+    });
 
-    setTimeout(() => {
-      messages.value.push(createMessage(`You said: ${message}`, "assisten"));
-    }, 200);
+    messages.value.push(data);
   }
 
   return {

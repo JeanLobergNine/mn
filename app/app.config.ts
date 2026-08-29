@@ -1,8 +1,8 @@
 export default defineAppConfig({
+  title: "Reactive fallback title for app",
   ui: {
     colors: {
-      primary: "green",
-      neutral: "slate",
+      //   primary: "#007bff",
     },
   },
 });

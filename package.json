@@ -13,9 +13,12 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^4.0.50",
     "@iconify-json/lucide": "^1.2.125",
     "@iconify-json/simple-icons": "^1.2.93",
+    "@nuxt/hints": "1.1.4",
     "@nuxt/ui": "^4.11.0",
+    "ai": "^7.0.83",
     "nuxt": "^4.5.2",
     "tailwindcss": "^4.3.3"
   },
