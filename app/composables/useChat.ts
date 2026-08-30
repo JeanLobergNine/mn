@@ -5,18 +5,18 @@ export default function useChat() {
   const chat = ref<Chat>(MOCK_CHAT);
   const messages = computed<ChatMessage[]>(() => chat.value.messages);
 
-  function createMessage(message: ChatMessage, role: ChatMessage["role"]) {
+  function createMessage(content: string, role: ChatMessage["role"]) {
     const id = messages.value.length.toString();
 
     return {
       id,
       role,
-      content: message,
+      content,
     };
   }
 
-  async function sendMessage(message: ChatMessage) {
-    messages.value.push(createMessage(message, "user"));
+  async function sendMessage(content: string) {
+    messages.value.push(createMessage(content, "user"));
     const data = await $fetch<ChatMessage>("/api/ai", {
       method: "POST",
       body: {

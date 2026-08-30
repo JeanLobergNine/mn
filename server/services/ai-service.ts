@@ -1,13 +1,16 @@
 import { generateText } from "ai";
 import { createOpenAI } from "@ai-sdk/openai";
-import type { Message, LanguageModelV1 } from "ai";
+import type { AssistantModelMessage, LanguageModel } from "ai";
 
 export const createOpenAIModel = (apiKey: string) => {
   const openAI = createOpenAI({ apiKey });
   return openAI("gpt-5-nano");
 };
 
-export async function generateChatResponse(model: LanguageModelV1, messages: Message[]) {
+export async function generateChatResponse(
+  model: LanguageModel,
+  messages: AssistantModelMessage[],
+) {
   if (!Array.isArray(messages) || messages.length === 0) {
     throw new Error("invalid message format");
   }
