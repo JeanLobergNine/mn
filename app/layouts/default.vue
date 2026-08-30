@@ -1,5 +1,8 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="layout-container">
+    <AppHeader />
     <main class="main-content">
       <slot />
     </main>
@@ -8,7 +11,7 @@
 
 <style scoped>
 .layout-container {
-  background-color: var(--color-green-50);
+  background-color: var(--ui-bg);
 }
 
 .main-content {

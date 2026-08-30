@@ -8,7 +8,7 @@
 
 <style scoped>
 .layout-container {
- background-color: var(--color-green-100);
+  background-color: var(--ui-bg);
 }
 
 .main-content {

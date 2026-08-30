@@ -21,27 +21,6 @@ useSeoMeta({
 <template>
   <UApp>
     <NuxtRouteAnnouncer />
-    <UHeader>
-      <template #left>
-        <NuxtLink to="/">
-          <AppLogo class="w-auto h-6 shrink-0" />
-        </NuxtLink>
-
-        <!-- <TemplateMenu /> -->
-      </template>
-
-      <template #right>
-        <UColorModeButton />
-        <UButton
-          to="https://github.com/MasteringNuxt/mastering-nuxt-full-stack-unleashed"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          variant="ghost"
-        />
-      </template>
-    </UHeader>
-
     <UMain>
       <NuxtLayout>
         <NuxtPage />
@@ -52,9 +31,7 @@ useSeoMeta({
 
     <UFooter>
       <template #left>
-        <p class="text-sm text-muted">
-          ©{{ new Date().getFullYear() }}
-        </p>
+        <p class="text-sm text-muted">©{{ new Date().getFullYear() }}</p>
       </template>
 
       <template #right>

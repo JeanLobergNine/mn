@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  title: "Reactive fallback title for app",
+  title: "AI chat",
   ui: {
     colors: {
       //   primary: "#007bff",
