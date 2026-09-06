@@ -1,9 +1,13 @@
 <script setup lang="ts">
 const appConfig = useAppConfig();
-const { createChat } = useChats();
-function handleCreateChat() {
-  createChat();
+const { createChatAndNavigate } = useChats();
+async function handleCreateChat() {
+  await createChatAndNavigate();
 }
+
+const emit = defineEmits<{
+  (e: "toggle-sidebar"): void;
+}>();
 </script>
 
 <template>
@@ -12,7 +16,12 @@ function handleCreateChat() {
       <NuxtLink to="/">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
-      <UButton icon="i-lucide-menu" color="primary" variant="ghost" />
+      <UButton
+        icon="i-lucide-menu"
+        color="primary"
+        variant="ghost"
+        @click="emit('toggle-sidebar')"
+      />
       <UButton icon="i-lucide-plus" @click="handleCreateChat"> Create chat </UButton>
     </template>
 

@@ -2,7 +2,6 @@ import type { Chat, ChatMessage } from "../types";
 
 export default function useChat(chatId: string) {
   const { chats } = useChats();
-
   const chat = computed(() => chats.value.find((c: Chat) => c.id === chatId));
 
   const messages = computed<ChatMessage[]>(() => chat.value?.messages || []);
@@ -27,7 +26,7 @@ export default function useChat(chatId: string) {
         messages: messages.value,
       },
     });
-    chat.value?.updatedAt = new Date();
+    chat.value.updatedAt = new Date();
     messages.value.push(data);
   }
 
