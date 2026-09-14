@@ -8,6 +8,7 @@ export default withNuxt({
     "@stylistic/comma-dangle": "off",
     "@stylistic/operator-linebreak": "off",
     "@stylistic/member-delimiter-style": "off",
+    "@stylistic/arrow-parens": "off",
     "vue/max-attributes-per-line": "off",
     "vue/comma-dangle": "off",
     "vue/singleline-html-element-content-newline": "off",

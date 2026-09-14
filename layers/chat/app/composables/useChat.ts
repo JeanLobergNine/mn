@@ -1,5 +1,3 @@
-import type { Chat, ChatMessage } from "../types";
-
 export default function useChat(chatId: string) {
   const { chats } = useChats();
   const chat = computed(() => chats.value.find((c: Chat) => c.id === chatId));
@@ -13,6 +11,8 @@ export default function useChat(chatId: string) {
       id,
       role,
       content,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
   }
 

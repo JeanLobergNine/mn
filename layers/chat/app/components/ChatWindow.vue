@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { ChatMessage, Chat } from "~/types";
-
 const { messages, chat } = defineProps<{
   messages: ChatMessage[];
   chat?: Chat;

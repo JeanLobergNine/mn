@@ -48,7 +48,7 @@ const emit = defineEmits<{
   left: 0;
   right: 0;
   height: 4rem; /* 16 * 0.25 = 4rem */
-  background-color: var(--ui-bg-muted);
+  background-color: var(--ui-primary);
   border-bottom: 1px solid var(--ui-border);
   display: flex;
   align-items: center;
